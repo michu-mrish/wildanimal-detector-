@@ -1,149 +1,148 @@
 # 🐾 Wild Animal Detection & Alert System
 
-Wild Animal Detection & Alert System is an intelligent, full-stack Django web application built to detect, monitor, and manage wild animal threats using state-of-the-art AI and video surveillance. Designed with both civilians/farmers and forest authorities in mind, this platform ensures public safety, real-time response, and proactive wildlife management.
+**Wild Animal Detection & Alert System** is a full-stack Django web platform designed to detect, monitor, and manage wild animal threats using state-of-the-art AI and video surveillance.
 
-At the heart of this platform is YOLOv8 (You Only Look Once v8) — one of the most accurate and efficient object detection models available — integrated seamlessly into the system to perform real-time animal recognition from trail camera footage.
+This system is tailored for both **civilians/farmers** and **forest authorities**, ensuring public safety, quick alerts, and proactive wildlife response.
 
-The system offers:
+At its core is the powerful **YOLOv8 (You Only Look Once v8)** — a real-time object detection model that enables the platform to detect and classify animals from trail camera feeds every few seconds.
 
-🔐 Secure Role-Based Authentication
-Separate login and signup interfaces for:
-
-🧑‍🌾 Civilians & Farmers – to report sightings and access safety resources.
-
-🌲 Forest Officers – to manage incidents, view detections, and monitor regions.
-
-🧑‍💻 Dual Dashboards with Role-Specific Functionality
-1. Civilian/Farmer Dashboard:
-📢 Report wild animal incidents with location and details.
-
-🛡️ Access safety guidelines and precautionary tips.
-
-📞 Contact local authorities in emergencies.
-
-2. Forest Officer Dashboard:
-🎥 View live camera feeds connected to trail cameras.
-
-🤖 Get AI-powered alerts every 5 seconds for animal detection in videos.
-
-📊 Monitor reported incidents across regions.
-
-📂 Track historical movements and response logs.
-
-🧠 AI-Powered Detection with YOLOv8
-Uses YOLOv8, a state-of-the-art real-time object detection model
-
-Continuously analyzes incoming camera frames
-
-Detects wild animals and classifies them by species
-
-Sends instant alerts to the authority dashboard for action
-
-🛠️ Full-Stack Web Architecture
-Backend: Django (Python) – handles user management, camera integrations, and AI coordination.
-
-Frontend: Django templates with HTML, CSS, JavaScript – delivers clean, responsive interfaces.
-
-AI/ML Module: Python-based image classification model connected to the backend for video processing.
-
-Database: SQLite (local), scalable to PostgreSQL/MySQL for deployment.
-
-This platform is a powerful demonstration of how modern AI and web development can be used to address real-world problems, supporting both community welfare and forest department operations with intelligence, automation, and user-focused design.
 ---
 
+## 🔑 Key Features
 
-📡 Real-Time Surveillance System
-🕵️‍♂️ The platform connects to trail or CCTV cameras installed near forest perimeters or rural areas.
+### 🔐 Secure Role-Based Authentication
 
-🕔 AI processes each frame every 5 seconds to detect animal presence, without needing manual monitoring.
+Separate login/signup portals for:
 
-🔁 The feed auto-refreshes, and detection logs are stored for future analysis.
+- Civilians / Farmers  
+  > Report sightings, access safety tips, and contact forest officers.
 
-🗺️ Option to integrate GPS mapping for location tagging of animal detections (can be an enhancement for future).
+- Forest Officers  
+  > Access detection alerts, live feeds, and track incidents.
 
-🗃️ Incident Management & Response
-📝 Civilians submit sightings or danger reports through a structured form with optional media upload.
+---
 
-🧭 Authorities can view, categorize, and mark incidents as resolved.
+### 🖥️ Dual Dashboards
 
-📌 Incident records include:
+**1. Civilian/Farmer Dashboard**
 
-Reporter details
+- Report wild animal incidents with details and location
+- Access safety guidelines and tips
+- Contact local forest authorities directly
 
-Time & date
+**2. Forest Officer Dashboard**
 
-Type of animal involved
+- View live trail camera feeds from the region
+- Get automatic AI alerts every 5 seconds
+- Monitor public reports and respond efficiently
+- Track logs of previous incidents and animal movements
 
-Action taken by forest officers
+---
 
-📈 Future scope: integrating SMS/email alerts for citizens in affected zones.
+### 🧠 AI-Powered Detection (YOLOv8)
 
-🌐 Future Enhancements (Optional Section)
-You can include this to highlight the scalability or roadmap:
+- Uses YOLOv8 object detection model for high accuracy and real-time inference
+- Processes camera frames every 5 seconds in the background
+- Classifies animals and sends immediate alerts to authorities
+- Operates seamlessly within the backend architecture
 
-🌍 Integration with Google Maps API to visualize detection points on a map.
+---
 
-📲 Push notification system for mobile alerts to nearby users.
+## 🛠️ Full-Stack Architecture
 
-🧠 Retraining the YOLOv8 model with more regional species for higher accuracy.
+- **Backend**: Django (Python)
+- **Frontend**: HTML, CSS, JavaScript (Django Templates)
+- **AI Module**: YOLOv8 object detection (Python-based)
+- **Database**: SQLite (can be upgraded to PostgreSQL/MySQL)
 
-☁️ Deploy on cloud platforms like AWS or Heroku for real-time scalability.
+---
 
-📱 Build a companion mobile app for rural users with limited access to desktop browsers.
+## 📡 Real-Time Surveillance System
 
-🧪 Testing & Evaluation
-🔄 Unit and integration testing using pytest and Django’s test framework.
+- Connects to live trail/CCTV cameras
+- AI scans feeds every 5 seconds automatically
+- Detection logs are stored for later analysis
+- Optional: GPS tagging of detections (planned)
 
-📸 Sample image & video datasets are included for verifying the AI detection module.
+---
 
-🧪 Accuracy can be tracked by comparing AI alerts with manual reports.
+## 🗃️ Incident Management
 
+- Civilians can submit detailed sightings with optional images
+- Authorities can mark reports as resolved and take actions
+- Incident logs include:
+  - Reporter identity
+  - Date/time
+  - Animal type
+  - Response notes
 
-## 🧪 Installation & Local Setup
+---
 
-### 📦 Clone the Repository
+## 🌍 Planned Enhancements
+
+- Google Maps integration for detection mapping
+- Push notifications for users in nearby areas
+- SMS/email alerts during threats
+- YOLOv8 retraining for regional species
+- Cloud deployment (AWS/Heroku)
+- Mobile app version for rural accessibility
+
+---
+
+## ✅ Testing & Evaluation
+
+- Automated testing using `pytest` and Django test tools
+- Sample images/videos included to test AI module
+- Manual vs AI alert comparison for accuracy validation
+
+---
+
+## 🚀 Installation & Local Setup
+
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/your-username/wild-animal-detection-system.git
 cd wild-animal-detection-system
 ```
 
-### 🐍 Set Up Virtual Environment
+### Step 2: Create and Activate Virtual Environment
 
 ```bash
 python -m venv venv
-# Activate it:
-# On Windows
+
+# Activate on Windows:
 venv\Scripts\activate
-# On Mac/Linux
+
+# Activate on macOS/Linux:
 source venv/bin/activate
 ```
 
-### 📥 Install Dependencies
+### Step 3: Install Required Packages
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### ⚙️ Apply Migrations
+### Step 4: Apply Migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 🧑‍💼 Create Superuser (for Admin Access)
+### Step 5: Create Admin User
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 🚀 Run the Server
+### Step 6: Run the Development Server
 
 ```bash
 python manage.py runserver
 ```
 
-- Open in browser: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+Visit the application: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-
+---
